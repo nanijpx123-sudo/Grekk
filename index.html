@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8f7f2">
+<meta name="description" content="GrekLudo, arcade teka-teki dan permainan strategi.">
+<title>GrekLudo — Arcade Teka-teki</title>
+<link rel="icon" href="avatar.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script src="chess.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<header class="top"><div class="shell nav">
+<a class="brand" href="#" aria-label="GrekLudo, beranda"><img src="avatar.svg" alt="">Grek<span>Ludo</span></a>
+<nav aria-label="Navigasi utama"><a href="#arena" class="nav-link">Arena</a><button class="nav-link" id="guide">Cara main</button></nav>
+<div class="nav-actions"><button class="icon-button" id="sound" aria-label="Aktifkan suara" title="Suara"></button><button id="profile" class="profile" aria-label="Lihat progres pemain"><img src="avatar.svg" alt=""></button></div>
+</div></header>
+<main class="shell">
+<section class="hero" aria-labelledby="hero-title">
+<div class="hero-copy"><div class="eyebrow"><span></span> ARCADE TEKA-TEKI</div>
+<h1 id="hero-title">Otak panas.<br><em>Main santai.</em></h1>
+<p>Asah strategi, pecahkan teka-teki, atau adu langkah bareng teman. Pilih arenamu dan mulai bermain.</p>
+<div class="hero-actions"><a class="primary" href="#arena">Jelajahi arena <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 4 8 8m-6 0h6V6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><button class="secondary" id="random">Acak permainan</button></div></div>
+<div class="hero-art" aria-hidden="true"><img src="hero.svg" alt=""><span class="orbit-dot"></span><span class="arcade-stamp">GL<br><small>PLAY CLUB</small></span></div>
+</section>
+<section id="arena" class="arena" aria-labelledby="arena-title">
+<header class="arena-head"><div><div class="kicker"><span></span> PILIH TANTANGAN</div><h2 id="arena-title">Arena permainan<span>.</span></h2></div><span id="game-count" aria-live="polite"></span></header>
+<div class="filters" id="filters" aria-label="Kategori permainan"></div>
+<div class="catalog" id="catalog"></div>
+</section>
+</main>
+<footer class="shell footer"><a class="brand" href="#"><img src="avatar.svg" alt="">Grek<span>Ludo</span></a><span>Arcade teka-teki · Main langsung di browser</span><a href="#arena">Ke arena <span aria-hidden="true">↑</span></a></footer>
+<dialog id="dialog" aria-labelledby="dialog-title">
+<div class="dialog-header"><div><div id="dialog-tag" class="kicker"></div><h2 id="dialog-title"></h2></div><button class="icon-button close" id="close" aria-label="Tutup">×</button></div>
+<div id="dialog-body"></div>
+</dialog>
+<div class="sr" id="announcement" aria-live="polite"></div>
+</body></html>
